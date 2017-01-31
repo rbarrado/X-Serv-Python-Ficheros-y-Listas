@@ -6,8 +6,9 @@ lineas = fichero.readlines()
 fichero.close()
 
 for linea in lineas:
-	Shell = linea.split(":")
-	print(Shell[0])
+	User = linea.split(':')[0]
+	Shell = linea.split(':')[-1][:-1]
+	print(User, Shell)
 	
 print("Hay " + str(len(lineas)) + " usuarios")	
 	
